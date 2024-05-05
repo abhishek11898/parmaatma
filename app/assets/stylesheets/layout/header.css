@@ -1,0 +1,50 @@
+.aum-logo, .menu-bar-icon{
+	height: 80px;
+}
+
+.logo-and-navbar {
+	padding-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+}
+
+.menu-bar-icon-div {
+	grid-column: 11; /* Place between 2nd and 11th column */
+
+}
+
+.aum-logo-div {
+	grid-column: 2; /* Place between 2nd and 11th column */
+}
+
+.intelligance-background-image {
+  width: 100%;
+  height: 700px;
+	z-index: -1;
+	position: absolute;
+}
+
+.quate-on-intelligance{
+	color: white;
+	font-size: 30px;
+	font-style: italic;
+	font-family: serif;
+	margin-top: 190px;
+	margin-left: 100px;
+}
+
+
+.kala-chakra-container {
+	margin-top: 242px;
+	margin-left: 200px;
+	display: flex;
+	align-items: center;
+}
+
+.kala-chakra-quate{
+	margin-left: 170px;
+	font-size: 40px;
+	font-family: serif;
+	font-style: italic;
+}
