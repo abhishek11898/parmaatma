@@ -7,7 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+    <%= javascript_include_tag 'layout'%>
     <%= stylesheet_link_tag 'layout/header' %>
 
     <%= favicon_link_tag 'aum_logo.png' %>
@@ -15,7 +15,7 @@
 
   <body>
     <%= render partial: 'layouts/header' %>
-
     <%= yield %>
+    <%= render partial: 'layouts/footer' %>
   </body>
 </html>

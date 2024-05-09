@@ -37,7 +37,8 @@
 
 .kala-chakra-container {
 	margin-top: 242px;
-	margin-left: 200px;
+	grid-column-start: 2;
+  grid-column-end: 11;
 	display: flex;
 	align-items: center;
 }
@@ -47,4 +48,196 @@
 	font-size: 40px;
 	font-family: serif;
 	font-style: italic;
+}
+
+.home-container{
+	display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.yoga-marg-container{
+	background-image: url('lotus_background.jpg');
+	background-size: cover; /* Cover: Scale the background image to be as large as possible while ensuring its dimensions are equal to or greater than the container's dimensions */
+  background-position: center; 
+	margin-top: 10px;
+	grid-column-start: 1;
+  grid-column-end: 14;
+	display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.yoga-marg-section{
+	grid-column-start: 2;
+  grid-column-end: 11;
+}
+
+.yoga-grunge-1, .yoga-grunge-2{
+	width: 706px;
+	height: 200px;
+	margin-top: 35px;
+}
+
+.yoga-header, .yoga-quate-section {
+  position: relative;
+  display: inline-block;
+}
+
+.yoga-quate-section {
+	margin-top: -110px;
+	margin-left: 130px;
+}
+
+.yoga-title {
+  position: absolute;
+  top: 50%; /* Positions the title vertically centered */
+  left: 50%; /* Positions the title horizontally centered */
+  transform: translate(-50%, -50%); /* Centers the title perfectly */
+  color: white; 
+  font-size: 50px; 
+  font-weight: bold; 
+	font-style: italic;
+  text-align: center; /* Aligns the text in the center */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow effect */
+  z-index: 1; /* Ensures the title appears above the image */
+}
+
+.yoga-quate{
+  position: absolute;
+  top: 50%; /* Positions the title vertically centered */
+  left: 50%; /* Positions the title horizontally centered */
+  transform: translate(-50%, -50%); /* Centers the title perfectly */
+  color: white; 
+  font-size: 20px; 
+  font-weight: bold; 
+	font-style: italic;
+  text-align: center; /* Aligns the text in the center */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow effect */
+  z-index: 1; /* Ensures the title appears above the image */
+}
+
+.yoga-section-one{
+	display: flex;
+}
+
+.yoga-images .yoga-image{
+	width: 500px;
+	height: 300px;
+	margin-top: 100px;
+}
+
+.card .card-image{
+	height: 207px;
+	width: 100%;
+}
+
+.card {
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 400px;
+	margin: 20px;
+	background-color: #fff;
+}
+
+.card .title{
+	padding: 20px;
+	font-size: 20px;
+  font-weight: bold;
+	word-wrap: break-word;
+	max-height: 67.5px!important;
+	font-family: FedraSerifAStdBook;
+	overflow: hidden;
+}
+
+.card .description{
+	padding: 0 20px 20px 20px;
+	font-size: 17px;
+	word-wrap: break-word;
+	overflow: hidden;
+	line-height: 1.5;
+	display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis; 
+	margin-bottom: 20px
+}
+
+.card-container{
+	display: flex;
+	margin-top: 50px;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-image{
+	width: 100%;
+	height: 400px;
+}
+
+.sapna-image{
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.home-container-footer{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  align-items: center;
+}
+
+.quate-on-dream{
+  font-size: 40px;
+  font-family: serif;
+  font-style: italic;
+  width: 1000px;
+}
+
+.footer .quates-on-enlightenment{
+  color: white;
+  position: absolute;
+  top: 20%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+
+.footer{
+  position: relative;
+}
+
+.footer .enlitened-being-images{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.footer .enlitened-being-slider-container{
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.enlitened-being-slider-track{
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.footer .arrow-forward, .footer .arrow-backward{
+  width: 60px;
+  height: 60px;
+  margin-top: 42px;
+  padding: 10px;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
 }
