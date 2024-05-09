@@ -21,4 +21,16 @@ jQuery(document).ready(function() {
       showImage.addClass('show-image').removeClass('hide');
     };
   });
+
+  jQuery('.logo-and-navbar .menu-bar-icon').on('click', function(){
+    var ShowElement = jQuery('.menu-bar-icon-div').find('.show');
+    var hideElement = jQuery('.menu-bar-icon-div').find('.hide');
+    if(hideElement.hasClass('show-drag-and-drop')){
+      jQuery('.navbar-menu').removeClass('hide');
+    }else{
+      jQuery('.navbar-menu').addClass('hide');
+    }
+    ShowElement.toggleClass('show hide');
+    hideElement.toggleClass('hide show');
+  });
 });

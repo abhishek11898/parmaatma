@@ -1,0 +1,145 @@
+@media (max-width: 1490px){
+  .yoga-images .yoga-image{
+    width: 400px;
+    height: 250px;
+    margin-top: 90px;
+  }
+
+  .yoga-quate-section .yoga-quate{
+    font-size: 16px;
+  }
+
+  .yoga-quate-section .yoga-grunge-2{
+    font-size: 16px;
+    width: 620px;
+  }
+
+  .yoga-header .yoga-grunge-1{
+    width: 550px;
+  }
+
+  .yoga-header .yoga-title{
+    font-size: 30px;
+  }
+
+  .kala-chakra-container .kala-chakra{
+    height: 300px;
+  }
+
+  .kala-chakra-container .kala-chakra-quate{
+    font-size: 30px;
+  }
+
+  .home-container-footer .sapna-image{
+    height: 200px;
+    width: 200px;
+  }
+  .home-container-footer .quate-on-dream{
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1300px){
+  .yoga-images .yoga-image{
+    width: 300px;
+    height: 250px;
+    margin-top: 70px;
+  }
+
+  .yoga-quate-section .yoga-grunge-2{
+    width: 520px;
+  }
+
+  .yoga-header .yoga-grunge-1{
+    width: 450px;
+  }
+
+  .enlitened-being-slider-track .enlitened-being-images{
+    width: 100px;
+    height: 100px;
+  }
+
+  .footer .arrow-forward, .footer .arrow-backward{
+    width: 40px;
+    height: 40px;
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 1100px){
+  .kala-chakra-container .kala-chakra{
+    height: 200px;
+  }
+
+  .kala-chakra-container .kala-chakra-quate{
+    font-size: 25px;
+  }
+
+  .container .intelligance-background-image{
+    height: 499px;
+  }
+
+  .container .quate-on-intelligance{
+    font-size: 25px;
+  }
+
+  .kala-chakra-container{
+    margin-top: 55px;
+  }
+
+  .yoga-images .yoga-image{
+    width: 200px;
+    height: 200px;
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 900px){
+  .kala-chakra-container .kala-chakra-quate{
+    margin-left: 70px;
+  }
+
+  .container .quate-on-intelligance{
+    font-size: 21px;
+  }
+
+  .yoga-images .yoga-image{
+    display: none;
+  }
+
+  .footer .quates-on-enlightenment{
+    font-size: 15px;
+    left: 60%;
+  }
+
+  .footer .footer-image{
+    height: 250px;
+  }
+
+  .footer .enlitened-being-slider-container {
+    left: 60%;
+    top: 70%
+  }
+
+  .home-container-footer .quate-on-dream{
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 800px){
+
+  .container .intelligance-background-image{
+    height: 450px;
+  }
+  .container .quate-on-intelligance{
+    font-size: 18px;
+  }
+
+  .kala-chakra-container .kala-chakra{
+    height: 100px;
+  }
+
+  .kala-chakra-container .kala-chakra-quate{
+    font-size: 21px;
+  }
+}

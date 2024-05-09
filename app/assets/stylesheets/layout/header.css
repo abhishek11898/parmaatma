@@ -1,5 +1,7 @@
 .aum-logo, .menu-bar-icon{
 	height: 80px;
+  z-index: 10;
+  position: relative;
 }
 
 .logo-and-navbar {
@@ -240,4 +242,50 @@
 
 .show {
   display: block !important;
+}
+
+.navbar-menu{
+  position: absolute;
+  top: 3%;
+  left: 80%;
+  font-size: 30px;
+  border-radius: 10%;
+  border: 1px solid #ccc;
+  transition: all 0.5s;
+  margin-right: 8px;
+}
+
+.navbar-menu .navbar-main-div{
+  opacity: 1;
+  visibility: visible;
+  transition: all 1s;
+  padding-inline-start: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  padding-top: 100px;
+}
+
+.navbar-main-div .page-link{
+  line-height: 20px;
+  color: white;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #121b2f;
+  font-style: italic;
+  font-family: serif;
+}
+
+
+.navbar-main-div .page-link:hover {
+  color: red;
+  transform: scale(0.9);
+}
+
+.show-drag-and-drop {
+  width: 50px;
+  height: 50px;
+}
+
+.show-drag-and-drop:hover {
+  transform: scale(0.9);
 }
