@@ -265,9 +265,8 @@
   padding-top: 100px;
 }
 
-.navbar-main-div .page-link{
+.navbar-main-div .page-link {
   line-height: 20px;
-  color: white;
   margin-bottom: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid #121b2f;
@@ -275,8 +274,12 @@
   font-family: serif;
 }
 
+.navbar-main-div .page-link a{
+  color: white;
+  text-decoration: none;
+}
 
-.navbar-main-div .page-link:hover {
+.navbar-main-div .page-link a:hover {
   color: red;
   transform: scale(0.9);
 }

@@ -1,0 +1,3 @@
+class EnlightenedBeing < ActiveRecord
+    
+end
