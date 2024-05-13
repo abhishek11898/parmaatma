@@ -1,17 +1,17 @@
 <div class='card-container' total-records=<%= total_records%>>
-  <% bhakti_yogas.each_slice((bhakti_yogas.size / 3.0).ceil).with_index do |slice, index| %>
+  <% aghori_margs.each_slice((aghori_margs.size / 3.0).ceil).with_index do |slice, index| %>
     <div class='row-<%= index + 1 %>'>
-      <% slice.each do |bhakti_yoga| %>
+      <% slice.each do |aghori_marg| %>
         <div class='card'>
-          <%= image_tag bhakti_yoga.image_url, class: 'card-image' %>
+          <%= image_tag aghori_marg.image_url, class: 'card-image' %>
           <div class='title'>
-            <%= bhakti_yoga.title %>
+            <%= aghori_marg.title %>
           </div>
           <div class='by-enlitened-being'>
             --By Sadhguru
           </div>
           <div class='description'>
-            <%= bhakti_yoga.description %>
+            <%= aghori_marg.description %>
           </div>
         </div>
       <% end %>

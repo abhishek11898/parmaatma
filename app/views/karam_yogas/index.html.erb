@@ -9,28 +9,28 @@
           <div class='yoga-header'>
             <%= image_tag "grunge6.png", class: 'yoga-grunge-1'%>
             <div class='yoga-title'>
-              Bhakti Yoga
+              Karam Yoga
             </div>
           </div>
           <div class='yoga-quate-section'>
             <%= image_tag "grunge2.png", class: 'yoga-grunge-2'%>
             <div class='yoga-quate'>
-              Bhakti Yoga is the path of love and devotion. It is not about rituals or ceremonies, but about opening your heart to the divine presence within and without.
+              Karma Yoga is the selfless service to humanity, without any attachment to the results. It is the action that purifies the heart and mind.
             </div>
           </div>
         </div>
         <div class='yoga-images'>
-          <%= image_tag "krishna", class: 'yoga-image'%>
+          <%= image_tag "volunteer", class: 'yoga-image'%>
         </div>
       </div>
     </div>
     <div class='buttons'>
-      <%= link_to "Add-Item",  new_bhakti_yoga_path, class: 'add-item'%>
+      <%= link_to "Add-Item",  new_karam_yoga_path, class: 'add-item'%>
     </div>
     <div class='bhakti-yogas-list'>
       <div class='yoga-section-two'>
-        <%if @bhakti_yogas.present? %>
-          <%= render partial: 'card', locals: { bhakti_yogas: @bhakti_yogas, total_records: @total_records} %>
+        <%if @karam_yogas.present? %>
+          <%= render partial: 'card', locals: { karam_yogas: @karam_yogas, total_records: @total_records} %>
         <%end%>
       </div>
     </div>

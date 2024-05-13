@@ -22,7 +22,8 @@ jQuery(document).ready(function() {
     };
   });
 
-  jQuery('.logo-and-navbar .menu-bar-icon').on('click', function(){
+  jQuery('.menu-bar-icon-div').on('click', function(){
+    debugger
     var ShowElement = jQuery('.menu-bar-icon-div').find('.show');
     var hideElement = jQuery('.menu-bar-icon-div').find('.hide');
     if(hideElement.hasClass('show-drag-and-drop')){

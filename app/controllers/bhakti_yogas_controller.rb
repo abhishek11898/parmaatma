@@ -1,6 +1,7 @@
 class BhaktiYogasController < ApplicationController
   def index 
-    @bhakti_yogas = BhaktiYoga.all
+    @bhakti_yogas = BhaktiYoga.limit(9)
+    @total_record = @bhakti_yogas.count
   end
 
   def new 
@@ -77,6 +78,15 @@ class BhaktiYogasController < ApplicationController
       redirect_to bhakti_yoga_path(@bhakti_yoga)
     end
   end
+
+  def get_more_bhakti_yoga_record_by_ajax
+    total_records = params[:total_records].to_i # Convert to integer
+    per_page = 10
+    @bhakti_yogas = BhaktiYoga.offset(total_records).limit(per_page)
+    respond_to do |format|
+      format.js
+    end
+  end  
 
   private 
 

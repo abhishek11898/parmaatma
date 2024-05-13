@@ -177,3 +177,33 @@
 .bhakti-yoga-show-page .buttons a{
   margin: 10px;
 }
+
+.load-more-button{
+  text-align: center;
+  padding: 40px;
+}
+
+#load-more:hover{
+  background-color: #39843d;
+  transform: scale(1.1);
+}
+
+#load-more{
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: orangered;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.bhakti-yoga-new-container .3s ease;
+}
+
+.by-enlitened-being{
+  font-size: 20px;
+  font-weight: 950;
+  text-align: end;
+  margin-top: -15px;
+  margin-right: 10px;
+}

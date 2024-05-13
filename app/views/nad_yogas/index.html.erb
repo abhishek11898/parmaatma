@@ -9,13 +9,13 @@
           <div class='yoga-header'>
             <%= image_tag "grunge6.png", class: 'yoga-grunge-1'%>
             <div class='yoga-title'>
-              Bhakti Yoga
+              Nad Yoga
             </div>
           </div>
           <div class='yoga-quate-section'>
             <%= image_tag "grunge2.png", class: 'yoga-grunge-2'%>
             <div class='yoga-quate'>
-              Bhakti Yoga is the path of love and devotion. It is not about rituals or ceremonies, but about opening your heart to the divine presence within and without.
+              Nad Yoga is the path of love and devotion. It is not about rituals or ceremonies, but about opening your heart to the divine presence within and without.
             </div>
           </div>
         </div>
@@ -25,12 +25,12 @@
       </div>
     </div>
     <div class='buttons'>
-      <%= link_to "Add-Item",  new_bhakti_yoga_path, class: 'add-item'%>
+      <%= link_to "Add-Item",  new_nad_yoga_path, class: 'add-item'%>
     </div>
     <div class='bhakti-yogas-list'>
       <div class='yoga-section-two'>
-        <%if @bhakti_yogas.present? %>
-          <%= render partial: 'card', locals: { bhakti_yogas: @bhakti_yogas, total_records: @total_records} %>
+        <%if @nad_yogas.present? %>
+          <%= render partial: 'card', locals: { nad_yogas: @nad_yogas, total_records: @total_records} %>
         <%end%>
       </div>
     </div>

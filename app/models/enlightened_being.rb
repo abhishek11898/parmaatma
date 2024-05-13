@@ -1,3 +1,3 @@
-class EnlightenedBeing < ActiveRecord
+class EnlightenedBeing < ApplicationRecord
     
 end

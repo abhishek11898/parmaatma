@@ -1,0 +1,17 @@
+<div class='bhakti-yoga-show-page'>
+    <div class='buttons'>
+      <%= link_to "Edit-Item",  edit_aghori_marg_url(@aghori_marg), class: 'edit-item'%>
+      <%= link_to "Delete Item", aghori_marg_path(@aghori_marg), method: :delete, 
+        data: { confirm: "Are you sure you want to delete this item?" }, class: 'delete-item' 
+      %>
+    </div>
+   <div class="title"> 
+      <%= @aghori_marg.title%>
+   </div>
+   <div class="image"> 
+      <%= image_tag @aghori_marg.image_url %>
+   </div>
+    <div class="description"> 
+      <%= @aghori_marg.description%>
+  </div>
+</div>

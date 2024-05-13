@@ -1,0 +1,17 @@
+<div class='bhakti-yoga-show-page'>
+    <div class='buttons'>
+      <%= link_to "Edit-Item",  edit_tantra_marg_url(@tantra_marg), class: 'edit-item'%>
+      <%= link_to "Delete Item", tantra_marg_path(@tantra_marg), method: :delete, 
+        data: { confirm: "Are you sure you want to delete this item?" }, class: 'delete-item' 
+      %>
+    </div>
+   <div class="title"> 
+      <%= @tantra_marg.title%>
+   </div>
+   <div class="image"> 
+      <%= image_tag @tantra_marg.image_url %>
+   </div>
+    <div class="description"> 
+      <%= @tantra_marg.description%>
+  </div>
+</div>
