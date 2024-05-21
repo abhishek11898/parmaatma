@@ -29,7 +29,7 @@
           </div>
         </div>
         <div class='yoga-section-two'>
-          <%= render partial: 'card'%>
+          <%= render partial: 'card', locals: { collections: @bhakti_yogas, controller_name: 'bhakti_yogas'} %>
         </div>
       </div>
       <div class='karma-yoga'>
@@ -53,7 +53,7 @@
           </div>
         </div>
         <div class='yoga-section-two'>
-          <%= render partial: 'card'%>
+          <%= render partial: 'card', locals: { collections: @karam_yogas, controller_name: 'karam_yogas'} %>
         </div>
       </div>
       <div class='gyana-yoga'>
@@ -77,7 +77,7 @@
           </div>
         </div>
         <div class='yoga-section-two'>
-          <%= render partial: 'card'%>
+          <%= render partial: 'card', locals: { collections: @gyan_yogas, controller_name: 'gyan_yogas'} %>
         </div>
       </div>
       <div class='kriya-yoga'>
@@ -101,7 +101,7 @@
           </div>
         </div>
         <div class='yoga-section-two'>
-          <%= render partial: 'card'%>
+          <%= render partial: 'card', locals: { collections: @kriya_yogas, controller_name: 'kriya_yogas'} %>
         </div>
       </div>
 		</div>

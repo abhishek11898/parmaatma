@@ -1,0 +1,18 @@
+<% if @karam_yogas.present? %>
+  var jQuerycontainer = '<%= j(render partial: "card", locals: { karam_yogas: @karam_yogas, total_records: @total_records}) %>';
+  var row_1_childs = jQuery(document.createElement('div')).html(jQuerycontainer).find('.row-1').children();
+  var row_2_childs = jQuery(document.createElement('div')).html(jQuerycontainer).find('.row-2').children();
+  var row_3_childs = jQuery(document.createElement('div')).html(jQuerycontainer).find('.row-3').children();
+  jQuery('.yoga-marg-container').find('.row-1').append(row_1_childs);
+  jQuery('.yoga-marg-container').find('.row-2').append(row_2_childs);
+  jQuery('.yoga-marg-container').find('.row-3').append(row_3_childs);
+    jQuery('.card-container .card').on('click', function() {
+    var controllerName = jQuery(this).data('controllerName');
+    var id = jQuery(this).data('id');
+    var url = `/${controllerName}/${id}`;
+    window.location.href = url;
+  });
+<% else %>
+  alert('No more records available');
+<% end %>
+

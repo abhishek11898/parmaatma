@@ -1,0 +1,20 @@
+<div class='card-container' total-records=<%= total_records%>>
+  <% enlightened_beings.each_slice((enlightened_beings.size / 3.0).ceil).with_index do |slice, index| %>
+    <div class='row-<%= index + 1 %>'>
+      <% slice.each do |enlightened_being| %>
+        <div class='card' data-controller-name='enlightened_beings' data-id='<%= enlightened_being.id %>'>
+          <%= image_tag enlightened_being.image_url, class: 'card-image' %>
+          <div class='title'>
+            <%= enlightened_being.name %>
+          </div>
+          <div class='description'>
+            <%= enlightened_being.about %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+<div class='load-more-button'>
+  <button id="load-more">Load More</button>
+</div>

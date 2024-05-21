@@ -1,3 +1,9 @@
+body {
+  overflow-x: hidden;
+  margin: 0px !important;
+}
+
+
 .aum-logo, .menu-bar-icon{
 	height: 80px;
   z-index: 10;
@@ -141,6 +147,10 @@
 	background-color: #fff;
 }
 
+.card-container .card:hover{
+  transform: scale(1.05);
+}
+
 .card .title{
 	padding: 20px;
 	font-size: 20px;
@@ -219,7 +229,7 @@
 .footer .enlitened-being-slider-container{
   position: absolute;
   top: 60%;
-  left: 70%;
+  left: 68%;
   transform: translate(-50%, -50%);
 }
 

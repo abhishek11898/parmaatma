@@ -7,25 +7,11 @@
   <div class="enlitened-being-slider-container">
     <div class="enlitened-being-slider-track">
       <%= image_tag "arrow-2", class: 'arrow-backward'%>
-      <%= image_tag "sapna2", class: 'enlitened-being-images show-image', data: {image_id: 1}%>
-      <%= image_tag "sapna2", class: 'enlitened-being-images show-image',  data: {image_id: 2}%>
-      <%= image_tag "sapna2", class: 'enlitened-being-images show-image',  data: {image_id: 3}%>
-      <%= image_tag "footer-image", class: 'enlitened-being-images show-image',  data: {image_id: 4}%>
-       <%= image_tag "sapna2", class: 'enlitened-being-images hide',  data: {image_id: 5}%>
-       <%= image_tag "footer-image", class: 'enlitened-being-images hide',  data: {image_id: 6}%>
-       <%= image_tag "sapna2", class: 'enlitened-being-images hide',  data: {image_id: 7}%>
-       <%= image_tag "footer-image", class: 'enlitened-being-images hide',  data: {image_id: 8}%>
-       <%= image_tag "sapna2", class: 'enlitened-being-images hide',  data: {image_id: 9}%>
-       <%= image_tag "footer-image", class: 'enlitened-being-images hide',  data: {image_id: 10}%>
-       <%= image_tag "sapna2", class: 'enlitened-being-images hide',  data: {image_id: 11}%>
-       <%= image_tag "footer-image", class: 'enlitened-being-images hide',  data: {image_id: 12}%>
-       <%= image_tag "sapna2", class: 'enlitened-being-images hide',  data: {image_id: 13}%>
-       <%= image_tag "footer-image", class: 'enlitened-being-images hide',  data: {image_id: 14}%>
-       <%= image_tag "sapna2", class: 'enlitened-being-images hide',  data: {image_id: 15}%>
-       <%= image_tag "footer-image", class: 'enlitened-being-images hide',  data: {image_id: 16}%>
-       <%= image_tag "sapna2", class: 'enlitened-being-images hide',  data: {image_id: 17}%>
-       <%= image_tag "footer-image", class: 'enlitened-being-images hide',  data: {image_id: 18}%>
-       <%= image_tag "sapna2", class: 'enlitened-being-images hide',  data: {image_id: 19}%>
+        <% @enlightened_beings.each do |being| %>
+          <%= link_to enlightened_being_path(being) do %>
+            <%= image_tag being.image_url, class: 'enlitened-being-images show-image', data: { image_id: being.id } %>
+          <% end %>
+        <% end %>
       <%= image_tag "arrow-1", class: 'arrow-forward'%>
     </div>
   </div>

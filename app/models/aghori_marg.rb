@@ -1,5 +1,7 @@
 class AghoriMarg < ApplicationRecord
 
+  belongs_to :enlightened_being
+  
   def self.images_folder_path
     folder_path = Rails.root.join('public', 'assets', 'aghori_marg', 'images')
     FileUtils.mkdir_p(folder_path) unless Dir.exist?(folder_path)
@@ -21,11 +23,11 @@ class AghoriMarg < ApplicationRecord
   end
 
   def absolute_image_url
-    File.join(AghoriMarg.images_folder_path, image_name)
+    image_name ? File.join(AghoriMarg.images_folder_path, image_name) : ''
   end
 
   def absolute_video_url
-    File.join(AghoriMarg.videos_folder_path, video)
+    video ? File.join(AghoriMarg.videos_folder_path, video) : ''
   end
 
   def image_url
@@ -33,6 +35,6 @@ class AghoriMarg < ApplicationRecord
   end
 
   def video_url
-    File.join(AghoriMarg.relative_videos_folder_path, video)
+    video ? File.join(AghoriMarg.relative_videos_folder_path, video) : ''
   end
 end

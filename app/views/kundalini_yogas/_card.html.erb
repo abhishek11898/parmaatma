@@ -2,13 +2,13 @@
   <% kundalini_yogas.each_slice((kundalini_yogas.size / 3.0).ceil).with_index do |slice, index| %>
     <div class='row-<%= index + 1 %>'>
       <% slice.each do |kundalini_yoga| %>
-        <div class='card'>
+        <div class='card' data-controller-name='kundalini_yogas' data-id='<%= kundalini_yoga.id %>'>
           <%= image_tag kundalini_yoga.image_url, class: 'card-image' %>
           <div class='title'>
             <%= kundalini_yoga.title %>
           </div>
           <div class='by-enlitened-being'>
-            --By Sadhguru
+            --By <%= kundalini_yoga.enlightened_being.name%>
           </div>
           <div class='description'>
             <%= kundalini_yoga.description %>

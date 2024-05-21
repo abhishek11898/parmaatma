@@ -3,48 +3,54 @@ Rails.application.routes.draw do
 
   resources :bhakti_yogas do 
     collection do 
-      get :get_more_bhakti_yoga_record_by_ajax
+      get :get_more_bhakti_yogas_record_by_ajax
     end
   end
   resources :karam_yogas do 
     collection do 
-      get :get_more_karam_yoga_record_by_ajax
+      get :get_more_karam_yogas_record_by_ajax
     end
   end
 
   resources :gyan_yogas do 
     collection do 
-      get :get_more_gyan_yoga_record_by_ajax
+      get :get_more_gyan_yogas_record_by_ajax
     end
   end 
 
   resources :kriya_yogas do 
     collection do 
-      get :get_more_kriya_yoga_record_by_ajax
+      get :get_more_kriya_yogas_record_by_ajax
     end
   end
 
   resources :kundalini_yogas do 
     collection do 
-      get :get_more_kundalini_yoga_record_by_ajax
+      get :get_more_kundalini_yogas_record_by_ajax
     end
   end
 
   resources :tantra_margs do 
     collection do 
-      get :get_more_tantra_marg_record_by_ajax
+      get :get_more_tantra_margs_record_by_ajax
     end
   end
 
   resources :aghori_margs do 
     collection do 
-      get :get_more_aghori_marg_record_by_ajax
+      get :get_more_aghori_margs_record_by_ajax
     end
   end
 
   resources :nad_yogas do 
     collection do 
-      get :get_more_nad_yoga_record_by_ajax
+      get :get_more_nad_yogas_record_by_ajax
+    end
+  end
+
+  resources :enlightened_beings do 
+    collection do 
+      get :get_more_nad_yoga_records_by_ajax
     end
   end
 

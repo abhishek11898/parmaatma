@@ -1,5 +1,7 @@
 class TantraMarg < ApplicationRecord
 
+  belongs_to :enlightened_being
+  
   def self.images_folder_path
     folder_path = Rails.root.join('public', 'assets', 'tantra_yoga', 'images')
     FileUtils.mkdir_p(folder_path) unless Dir.exist?(folder_path)
@@ -21,11 +23,11 @@ class TantraMarg < ApplicationRecord
   end
 
   def absolute_image_url
-    File.join(TantraMarg.images_folder_path, image_name)
+    image_name ? File.join(TantraMarg.images_folder_path, image_name) : ''
   end
 
   def absolute_video_url
-    File.join(TantraMarg.videos_folder_path, video)
+    video ? File.join(TantraMarg.videos_folder_path, video) : ''
   end
 
   def image_url
@@ -33,6 +35,6 @@ class TantraMarg < ApplicationRecord
   end
 
   def video_url
-    File.join(TantraMarg.relative_videos_folder_path, video)
+    video ? File.join(TantraMarg.relative_videos_folder_path, video) : ''
   end
 end

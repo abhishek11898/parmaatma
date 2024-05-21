@@ -1,7 +1,7 @@
 class KundaliniYogasController < ApplicationController
   def index 
     @kundalini_yogas = KundaliniYoga.limit(9)
-    @total_record = @kundalini_yogas.count
+    @total_records = @kundalini_yogas.count
   end
 
   def new 
@@ -50,6 +50,34 @@ class KundaliniYogasController < ApplicationController
 
   def update
     @kundalini_yoga = KundaliniYoga.find(params[:id])
+    if params[:kundalini_yoga][:image_name].present?
+      image_tempfile = params[:kundalini_yoga][:image_name].tempfile
+      image_original_filename = params[:kundalini_yoga][:image_name].original_filename
+      image_extension = File.extname(image_original_filename)
+      image_new_filename = "#{@kundalini_yoga.image_name.split('.').first}#{image_extension}" 
+      image_old_filename = @kundalini_yoga.image_name
+      image_old_path = Rails.root.join(KundaliniYoga.images_folder_path, image_old_filename)
+      image_new_path = Rails.root.join(KundaliniYoga.images_folder_path, image_new_filename)
+      if File.exist?(image_old_path)
+        File.delete(image_old_path)
+      end
+      FileUtils.cp(image_tempfile, image_new_path)
+      @kundalini_yoga.image_name = image_new_filename
+    end
+    if params[:kundalini_yoga][:video].present?
+      video_tempfile = params[:kundalini_yoga][:video].tempfile
+      video_original_filename = params[:kundalini_yoga][:video].original_filename
+      video_extension = File.extname(video_original_filename)
+      video_new_filename = "#{@kundalini_yoga.video.split('.').first}#{video_extension}" 
+      video_old_filename = @kundalini_yoga.video
+      video_new_path = Rails.root.join(KundaliniYoga.videos_folder_path, video_new_filename)
+      video_old_path = Rails.root.join(KundaliniYoga.videos_folder_path, video_old_filename)
+      if File.exist?(video_old_path)
+        File.delete(video_old_path)
+      end
+      FileUtils.cp(video_tempfile, video_new_path)
+      @kundalini_yoga.video = video_new_filename
+    end
     if @kundalini_yoga.update(kundalini_yoga_params)
       flash[:success] = 'Kundalini yoga item updated successfully.'
       redirect_to @kundalini_yoga
@@ -79,9 +107,9 @@ class KundaliniYogasController < ApplicationController
     end
   end
 
-  def get_more_kundalini_yoga_record_by_ajax
+  def get_more_kundalini_yogas_record_by_ajax
     total_records = params[:total_records].to_i # Convert to integer
-    per_page = 10
+    per_page = 9
     @kundalini_yogas = KundaliniYoga.offset(total_records).limit(per_page)
     respond_to do |format|
       format.js

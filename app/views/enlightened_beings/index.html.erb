@@ -1,0 +1,38 @@
+<%= stylesheet_link_tag 'bhakti_yoga.css' %>
+<%= javascript_include_tag 'bhakti_yoga.js'%>
+
+<div class='yoga-marg-container'>
+  <div class='yoga-marg-section'>
+    <div class='bhakti-yoga'>
+      <div class='yoga-section-one'>
+        <div>
+          <div class='yoga-header'>
+            <%= image_tag "grunge6.png", class: 'yoga-grunge-1'%>
+            <div class='yoga-title'>
+              Enlightened Beings
+            </div>
+          </div>
+          <div class='yoga-quate-section'>
+            <%= image_tag "grunge2.png", class: 'yoga-grunge-2'%>
+            <div class='yoga-quate'>
+              Enlightenment is not an achievement, it is a realization that there is nothing to achieve, nowhere to go .
+            </div>
+          </div>
+        </div>
+        <div class='yoga-images'>
+          <%= image_tag "krishna", class: 'yoga-image'%>
+        </div>
+      </div>
+    </div>
+    <div class='buttons'>
+      <%= link_to "Add-Item",  new_enlightened_being_path, class: 'add-item'%>
+    </div>
+    <div class='bhakti-yogas-list'>
+      <div class='yoga-section-two'>
+        <%if @enlightened_beings.present? %>
+          <%= render partial: 'card', locals: { enlightened_beings: @enlightened_beings, total_records: @total_records} %>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>

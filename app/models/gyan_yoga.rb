@@ -1,4 +1,6 @@
 class GyanYoga < ApplicationRecord
+  
+  belongs_to :enlightened_being
 
   def self.images_folder_path
     folder_path = Rails.root.join('public', 'assets', 'gyan_yoga', 'images')
@@ -21,11 +23,11 @@ class GyanYoga < ApplicationRecord
   end
 
   def absolute_image_url
-    File.join(GyanYoga.images_folder_path, image_name)
+    image_name ? File.join(GyanYoga.images_folder_path, image_name) : ''
   end
 
   def absolute_video_url
-    File.join(GyanYoga.videos_folder_path, video)
+    video ? File.join(GyanYoga.videos_folder_path, video) : ''
   end
 
   def image_url
@@ -33,6 +35,6 @@ class GyanYoga < ApplicationRecord
   end
 
   def video_url
-    File.join(GyanYoga.relative_videos_folder_path, video)
+    video ? File.join(GyanYoga.relative_videos_folder_path, video) : ''
   end
 end

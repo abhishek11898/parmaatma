@@ -34,4 +34,11 @@ jQuery(document).ready(function() {
     ShowElement.toggleClass('show hide');
     hideElement.toggleClass('hide show');
   });
+
+  jQuery('.card-container .card').on('click', function() {
+    var controllerName = jQuery(this).data('controllerName');
+    var id = jQuery(this).data('id');
+    var url = `/${controllerName}/${id}`;
+    window.location.href = url;
+  });
 });

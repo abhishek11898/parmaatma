@@ -15,4 +15,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 Rails.application.config.assets.precompile += %w( application.js application.css)
 Rails.application.config.assets.precompile += %w( layout/header.css layout/responsive.css bhakti_yoga.css )
-Rails.application.config.assets.precompile += %w( layout.js )
+Rails.application.config.assets.precompile += %w( layout.js bhakti_yoga.js)

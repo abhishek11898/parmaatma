@@ -1,7 +1,7 @@
 class TantraMargsController < ApplicationController
   def index 
     @tantra_margs = TantraMarg.limit(9)
-    @total_record = @tantra_margs.count
+    @total_records = @tantra_margs.count
   end
 
   def new 
@@ -50,6 +50,34 @@ class TantraMargsController < ApplicationController
 
   def update
     @tantra_marg = TantraMarg.find(params[:id])
+    if params[:tantra_marg][:image_name].present?
+      image_tempfile = params[:tantra_marg][:image_name].tempfile
+      image_original_filename = params[:tantra_marg][:image_name].original_filename
+      image_extension = File.extname(image_original_filename)
+      image_new_filename = "#{@tantra_marg.image_name.split('.').first}#{image_extension}" 
+      image_old_filename = @tantra_marg.image_name
+      image_old_path = Rails.root.join(TantraMarg.images_folder_path, image_old_filename)
+      image_new_path = Rails.root.join(TantraMarg.images_folder_path, image_new_filename)
+      if File.exist?(image_old_path)
+        File.delete(image_old_path)
+      end
+      FileUtils.cp(image_tempfile, image_new_path)
+      @tantra_marg.image_name = image_new_filename
+    end
+    if params[:tantra_marg][:video].present?
+      video_tempfile = params[:tantra_marg][:video].tempfile
+      video_original_filename = params[:tantra_marg][:video].original_filename
+      video_extension = File.extname(video_original_filename)
+      video_new_filename = "#{@tantra_marg.video.split('.').first}#{video_extension}" 
+      video_old_filename = @tantra_marg.video
+      video_new_path = Rails.root.join(TantraMarg.videos_folder_path, video_new_filename)
+      video_old_path = Rails.root.join(TantraMarg.videos_folder_path, video_old_filename)
+      if File.exist?(video_old_path)
+        File.delete(video_old_path)
+      end
+      FileUtils.cp(video_tempfile, video_new_path)
+      @tantra_marg.video = video_new_filename
+    end
     if @tantra_marg.update(tantra_marg_params)
       flash[:success] = 'Tantra yoga item updated successfully.'
       redirect_to @tantra_marg
@@ -79,9 +107,9 @@ class TantraMargsController < ApplicationController
     end
   end
 
-  def get_more_tantra_marg_record_by_ajax
+  def get_more_tantra_margs_record_by_ajax
     total_records = params[:total_records].to_i # Convert to integer
-    per_page = 10
+    per_page = 9
     @tantra_margs = TantraMarg.offset(total_records).limit(per_page)
     respond_to do |format|
       format.js

@@ -1,5 +1,6 @@
 class BhaktiYoga < ApplicationRecord
-
+  belongs_to :enlightened_being
+  
   def self.images_folder_path
     folder_path = Rails.root.join('public', 'assets', 'bhakti_yoga', 'images')
     FileUtils.mkdir_p(folder_path) unless Dir.exist?(folder_path)
@@ -21,18 +22,18 @@ class BhaktiYoga < ApplicationRecord
   end
 
   def absolute_image_url
-    File.join(BhaktiYoga.images_folder_path, image_name)
+    image_name ? File.join(BhaktiYoga.images_folder_path, image_name) : ''
   end
 
   def absolute_video_url
-    File.join(BhaktiYoga.videos_folder_path, video)
+    video ? File.join(BhaktiYoga.videos_folder_path, video) : ''
   end
 
   def image_url
-    File.join(BhaktiYoga.relative_images_folder_path, image_name)
+    image_name ? File.join(BhaktiYoga.relative_images_folder_path, image_name) : ''
   end
 
   def video_url
-    File.join(BhaktiYoga.relative_videos_folder_path, video)
+    video ? File.join(BhaktiYoga.relative_videos_folder_path, video) : ''
   end
 end

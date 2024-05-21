@@ -1,0 +1,28 @@
+<div class='bhakti-yoga-show-page'>
+  <div class='buttons'>
+    <%= link_to "Edit-Item",  edit_enlightened_being_url(@enlightened_being), class: 'edit-item'%>
+    <%= link_to "Delete Item", enlightened_being_path(@enlightened_being), method: :delete, 
+      data: { confirm: "Are you sure you want to delete this item?" }, class: 'delete-item' 
+    %>
+  </div>
+  <div class="title"> 
+    <%= @enlightened_being.name%>
+  </div>
+  <div class="image"> 
+    <%= image_tag @enlightened_being.image_url %>
+  </div>
+  <div class="description"> 
+    <b>Address:- </b><%= @enlightened_being.adress%>
+  </div>
+  <div class="description"> 
+    <b>Birth Date:- </b><%= @enlightened_being.birth_date%>
+  </div>
+  <%if @enlightened_being.mahasamadhi%>
+  <div class="description"> 
+    <b>Mahasamadhi-date:- </b><%= @enlightened_being.mahasamadhi%>
+  </div>
+  <%end%>
+    <div class="description"> 
+    <%= @enlightened_being.about%>
+  </div>
+</div>

@@ -2,7 +2,7 @@
   <% karam_yogas.each_slice((karam_yogas.size / 3.0).ceil).with_index do |slice, index| %>
     <div class='row-<%= index + 1 %>'>
       <% slice.each do |karam_yoga| %>
-        <div class='card'>
+        <div class='card' data-controller-name='karam_yogas' data-id='<%= karam_yoga.id %>'>
           <%if karam_yoga.image_url.present?%>
             <%= image_tag karam_yoga.image_url, class: 'card-image' %>
           <%else%>
@@ -12,7 +12,7 @@
             <%= karam_yoga.title %>
           </div>
           <div class='by-enlitened-being'>
-            --By Sadhguru
+            --By <%= karam_yoga.enlightened_being.name%>
           </div>
           <div class='description'>
             <%= karam_yoga.description %>

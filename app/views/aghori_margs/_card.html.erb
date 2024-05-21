@@ -2,13 +2,13 @@
   <% aghori_margs.each_slice((aghori_margs.size / 3.0).ceil).with_index do |slice, index| %>
     <div class='row-<%= index + 1 %>'>
       <% slice.each do |aghori_marg| %>
-        <div class='card'>
+        <div class='card' data-controller-name='aghori_margs' data-id='<%= aghori_marg.id %>'>
           <%= image_tag aghori_marg.image_url, class: 'card-image' %>
           <div class='title'>
             <%= aghori_marg.title %>
           </div>
           <div class='by-enlitened-being'>
-            --By Sadhguru
+            --By <%= aghori_marg.enlightened_being.name%>
           </div>
           <div class='description'>
             <%= aghori_marg.description %>
