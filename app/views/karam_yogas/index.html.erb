@@ -24,9 +24,11 @@
         </div>
       </div>
     </div>
-    <div class='buttons'>
-      <%= link_to "Add-Item",  new_karam_yoga_path, class: 'add-item'%>
-    </div>
+    <%if admin_signed_in?%>
+      <div class='buttons'>
+        <%= link_to "Add-Item",  new_karam_yoga_path, class: 'add-item'%>
+      </div>
+    <%end%>
     <div class='bhakti-yogas-list'>
       <div class='yoga-section-two'>
         <%if @karam_yogas.present? %>

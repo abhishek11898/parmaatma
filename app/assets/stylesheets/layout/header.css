@@ -301,3 +301,25 @@ body {
 .show-drag-and-drop:hover {
   transform: scale(0.9);
 }
+
+.sign-out-btn{
+  margin-top: 22px;
+  margin-left: -30px;
+}
+
+.sign-out-btn a{
+  background: linear-gradient(to right, #f65599, #9165f5, #53a5f5);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sign-out-btn a:hover {
+  background: linear-gradient(to right, #ff6b6b, #b684f3, #87cdfa);
+}
+
+

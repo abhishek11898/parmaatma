@@ -1,10 +1,12 @@
 <div class='bhakti-yoga-show-page'>
+  <%if admin_signed_in?%>
     <div class='buttons'>
       <%= link_to "Edit-Item",  edit_nad_yoga_url(@nad_yoga), class: 'edit-item'%>
       <%= link_to "Delete Item", nad_yoga_path(@nad_yoga), method: :delete, 
         data: { confirm: "Are you sure you want to delete this item?" }, class: 'delete-item' 
       %>
     </div>
+  <%end%>
    <div class="title"> 
       <%= @nad_yoga.title%>
    </div>

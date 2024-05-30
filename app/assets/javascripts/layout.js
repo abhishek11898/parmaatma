@@ -23,13 +23,14 @@ jQuery(document).ready(function() {
   });
 
   jQuery('.menu-bar-icon-div').on('click', function(){
-    debugger
     var ShowElement = jQuery('.menu-bar-icon-div').find('.show');
     var hideElement = jQuery('.menu-bar-icon-div').find('.hide');
     if(hideElement.hasClass('show-drag-and-drop')){
       jQuery('.navbar-menu').removeClass('hide');
+      jQuery('.container .sign-out-btn').addClass('hide');
     }else{
       jQuery('.navbar-menu').addClass('hide');
+      jQuery('.container .sign-out-btn').removeClass('hide');
     }
     ShowElement.toggleClass('show hide');
     hideElement.toggleClass('hide show');
@@ -40,5 +41,10 @@ jQuery(document).ready(function() {
     var id = jQuery(this).data('id');
     var url = `/${controllerName}/${id}`;
     window.location.href = url;
+  });
+
+  jQuery('.aum-logo-div .aum-logo').on('click', function(){
+    var url = '/admins/sign_in';
+    window.location.href = url; 
   });
 });

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :bhakti_yogas do 
@@ -50,10 +51,9 @@ Rails.application.routes.draw do
 
   resources :enlightened_beings do 
     collection do 
-      get :get_more_nad_yoga_records_by_ajax
+      get :get_more_enlightened_beings_record_by_ajax
     end
   end
-
 
   root to: "home#index"
 end
