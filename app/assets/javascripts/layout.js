@@ -39,7 +39,7 @@ jQuery(document).ready(function() {
   jQuery('.card-container .card').on('click', function() {
     var controllerName = jQuery(this).data('controllerName');
     var id = jQuery(this).data('id');
-    var url = `/${controllerName}/${id}`;
+    var url = '/' + controllerName + '/' + id;
     window.location.href = url;
   });
 

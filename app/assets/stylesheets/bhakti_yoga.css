@@ -126,7 +126,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.bhakti-yoga-new-container .3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .bhakti-yoga-new-container .btn:hover {
@@ -135,7 +135,7 @@
 
 
 .bhakti-yoga-show-page {
-  margin-top: 270px;
+  margin-top: 320px;
 }
 
 .bhakti-yoga-show-page .title{
@@ -197,7 +197,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.bhakti-yoga-new-container .3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .by-enlitened-being{
